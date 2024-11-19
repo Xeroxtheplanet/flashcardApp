@@ -29,7 +29,7 @@ public class SysManip {
 	}
 	
 	public static void CreateFile() {
-		try {
+		try { //createNewFile throws an IOException
 			File file = new File("C:\\Users\\"+System.getProperty("user.name")+"\\OneDrive\\Desktop\\Vanki.txt");
 			if (file.createNewFile()) {
 				System.out.println("File created:" + file.getName());
