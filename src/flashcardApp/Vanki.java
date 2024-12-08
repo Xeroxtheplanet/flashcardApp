@@ -28,7 +28,7 @@ public class Vanki { //going to apply COMP2000 knowledge by replacing returnToMa
 	
 	
 	
-	public void run() {//Current errors: Need exception character handling for initial enter
+	public void run() {//Current errors: Need exception character handling for initial enter, handle empty space entering before something is selected
 		
 		
 		
@@ -68,7 +68,7 @@ public class Vanki { //going to apply COMP2000 knowledge by replacing returnToMa
 					programState = State.START;
 				}
 				
-				else if(mainScan.hasNext("n")||mainScan.hasNext("x")){
+				else if(mainScan.hasNext("n") || mainScan.hasNext("x")){
 					
 					mainScan.close(); //Closes scanner AND input source.
 					Runtime.exitLoop = true;
@@ -110,7 +110,7 @@ public class Vanki { //going to apply COMP2000 knowledge by replacing returnToMa
 			 
 			 else if(programState == State.CHECKINPUT && mainScan.hasNext("v")) { //Currently working on this bit. cardNumber appears no to be returning the question properly
 				 	
-				 	String acceptable = "0123456789";
+				 	String acceptable = "0123456789"; //note replace this with regex, I tried this with something in an assignment and it was buggy
 				 	String tempString = "";
 					
 				 	programState = State.PROGRESSION;
@@ -164,7 +164,7 @@ public class Vanki { //going to apply COMP2000 knowledge by replacing returnToMa
 				 			}
 				 		}
 				 		
-				 		returnToMain =0; //Temporary program breaking point until I can fix bugs or implement more things
+				 		//returnToMain =0; //Temporary program breaking point until I can fix bugs or implement more things
 				 		
 				 	}
 				}
